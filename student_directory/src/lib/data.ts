@@ -1,0 +1,23 @@
+export type Student = {
+  id: string; name: string; department: string; year: number; track: string;
+  email: string; enrolled: string; about: string; subjects: { name: string; credits: string }[];
+};
+
+export const students: Student[] = [
+  { id: "STU-1042", name: "Aarav Mehta", department: "Computer Science", year: 3, track: "Web Development", email: "aarav.mehta@campus.edu", enrolled: "Fall 2022", about: "Aarav is an undergraduate researcher focusing on distributed systems and cloud architecture. When not coding in Rust or Go, he mentors first-year engineering students in algorithm fundamentals.", subjects: [{ name: "CS-301: Distributed Systems & Microservices", credits: "4.0 Credits" }, { name: "CS-340: Web Application Architecture", credits: "4.0 Credits" }, { name: "CS-280: Algorithms & Complexity", credits: "3.5 Credits" }] },
+  { id: "STU-1089", name: "Elena Rostova", department: "Design", year: 2, track: "Visual Communication", email: "elena.rostova@campus.edu", enrolled: "Fall 2023", about: "Elena explores visual storytelling, accessible design systems, and the ways thoughtful interfaces can make complex ideas easier to understand.", subjects: [{ name: "DS-210: Visual Communication", credits: "4.0 Credits" }, { name: "DS-225: Interaction Design", credits: "3.5 Credits" }] },
+  { id: "STU-1120", name: "Marcus Chen", department: "Business", year: 4, track: "Business Analytics", email: "marcus.chen@campus.edu", enrolled: "Fall 2021", about: "Marcus is interested in financial technology, data-informed strategy, and building responsible businesses with a global outlook.", subjects: [{ name: "BU-402: Strategic Management", credits: "4.0 Credits" }, { name: "BU-318: Financial Technology", credits: "3.5 Credits" }] },
+  { id: "STU-1155", name: "Priya Sharma", department: "Computer Science", year: 1, track: "Web Development", email: "priya.sharma@campus.edu", enrolled: "Fall 2024", about: "Priya is learning modern web engineering and enjoys creating clear, friendly digital experiences for campus communities.", subjects: [{ name: "CS-101: Programming Foundations", credits: "4.0 Credits" }, { name: "CS-140: Reactive UI Design", credits: "3.5 Credits" }] },
+  { id: "STU-1201", name: "Lucas Dubois", department: "Design", year: 3, track: "Product Design", email: "lucas.dubois@campus.edu", enrolled: "Fall 2022", about: "Lucas combines user research and prototyping to shape useful products, with a particular interest in collaborative tools.", subjects: [{ name: "DS-305: Product Prototyping", credits: "4.0 Credits" }, { name: "DS-330: Design Research", credits: "3.5 Credits" }] },
+  { id: "STU-1244", name: "Maya Lin", department: "Business", year: 2, track: "International Entrepreneurship", email: "maya.lin@campus.edu", enrolled: "Fall 2023", about: "Maya studies entrepreneurship and international markets, and is curious about how small teams bring ideas to life.", subjects: [{ name: "BU-220: Global Markets", credits: "4.0 Credits" }, { name: "BU-245: New Venture Design", credits: "3.5 Credits" }] },
+  { id: "STU-1310", name: "Tariq Al-Mansoor", department: "Computer Science", year: 4, track: "Web Development", email: "tariq.almansoor@campus.edu", enrolled: "Fall 2021", about: "Tariq works on reliable distributed web systems and enjoys helping student teams ship ambitious projects.", subjects: [{ name: "CS-410: Distributed Web Systems", credits: "4.0 Credits" }, { name: "CS-430: Cloud Computing", credits: "4.0 Credits" }] },
+  { id: "STU-1388", name: "Sophia Müller", department: "Computer Science", year: 2, track: "Web Development", email: "sophia.mueller@campus.edu", enrolled: "Fall 2023", about: "Sophia builds progressive web experiences and is interested in making useful apps work beautifully across devices.", subjects: [{ name: "CS-240: Progressive Web Apps", credits: "4.0 Credits" }, { name: "CS-260: Human Computer Interaction", credits: "3.5 Credits" }] },
+];
+
+export const departments = [
+  { slug: "computer-science", name: "Computer Science", description: "Software engineering, artificial intelligence, algorithms, and systems infrastructure.", specializations: 4, enrollment: 320 },
+  { slug: "design", name: "Design", description: "User experience research, visual communication, interaction design, and product prototyping.", specializations: 3, enrollment: 185 },
+  { slug: "business", name: "Business", description: "Strategic management, financial technology, international entrepreneurship, and analytics.", specializations: 3, enrollment: 240 },
+];
+
+export const initials = (name: string) => name.split(/\s+/).map((part) => part[0]).join("").slice(0, 2).toUpperCase();

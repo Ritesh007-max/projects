@@ -1,4 +1,4 @@
-import StudentDirectory from "@/components/StudentDirectory";
+﻿import { StudentDirectory } from "@/components";
 
 export default function StudentsPage() {
   return <StudentDirectory />;
